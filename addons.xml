@@ -2,6 +2,11 @@
 <addon id="repository.andrew" name="Andrew's Kodi Workshop" version="1.0.0" provider-name="Andrew Webber">
     <extension point="xbmc.addon.repository" name="Andrew's Kodi Workshop">
         <dir>
+            <info compressed="false">https://raw.githubusercontent.com/phantomgrimsalvo-svg/kodi-andrew-workshop/main/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/phantomgrimsalvo-svg/kodi-andrew-workshop/main/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/phantomgrimsalvo-svg/kodi-andrew-workshop/main/zips/</datadir>
+        </dir>
+        <dir>
             <info compressed="false">https://phantomgrimsalvo-svg.github.io/kodi-andrew-workshop/addons.xml</info>
             <checksum>https://phantomgrimsalvo-svg.github.io/kodi-andrew-workshop/addons.xml.md5</checksum>
             <datadir zip="true">https://phantomgrimsalvo-svg.github.io/kodi-andrew-workshop/zips/</datadir>

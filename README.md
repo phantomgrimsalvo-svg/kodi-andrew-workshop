@@ -22,7 +22,9 @@ These are **personal forks only**. They are not official releases and must not b
 - https://github.com/phantomgrimsalvo-svg/skin.arctic.fuse.3.andrew
 - https://github.com/phantomgrimsalvo-svg/plugin.video.themoviedb.helper.andrew
 
-GitHub Pages source (after Pages is enabled): https://phantomgrimsalvo-svg.github.io/kodi-andrew-workshop/
+Release with all zips: https://github.com/phantomgrimsalvo-svg/kodi-andrew-workshop/releases/tag/v1.0.0
+
+GitHub Pages (File Manager folder; may lag on first publish): https://phantomgrimsalvo-svg.github.io/kodi-andrew-workshop/
 
 ## Licenses
 
