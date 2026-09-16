@@ -8,14 +8,18 @@ Cumination is an **adult** add-on. Install **TMDb Helper (Andrew)** before you s
 
 Open any of these in a browser, save the file, then in Kodi: **Add-ons → Install from zip file** and pick the downloaded zip. Install **in this order**:
 
+Same files as GitHub Release **v1.1.0** (feature forks, not rebrand-only):
+
 1. TMDb Helper (Andrew) 6.18.0  
-   https://github.com/phantomgrimsalvo-svg/kodi-andrew-workshop/releases/download/v1.0.0/plugin.video.themoviedb.helper.andrew-6.18.0.zip
+   https://github.com/phantomgrimsalvo-svg/kodi-andrew-workshop/releases/download/v1.1.0/plugin.video.themoviedb.helper.andrew-6.18.0.zip
 2. Arctic Fuse 3 (Andrew) 3.3.1  
-   https://github.com/phantomgrimsalvo-svg/kodi-andrew-workshop/releases/download/v1.0.0/skin.arctic.fuse.3.andrew-3.3.1.zip
+   https://github.com/phantomgrimsalvo-svg/kodi-andrew-workshop/releases/download/v1.1.0/skin.arctic.fuse.3.andrew-3.3.1.zip
 3. Cumination (Andrew) 1.2.1 (optional; adult)  
-   https://github.com/phantomgrimsalvo-svg/kodi-andrew-workshop/releases/download/v1.0.0/plugin.video.cumination.andrew-1.2.1.zip
+   https://github.com/phantomgrimsalvo-svg/kodi-andrew-workshop/releases/download/v1.1.0/plugin.video.cumination.andrew-1.2.1.zip
 4. Workshop repository (optional, for later updates)  
-   https://github.com/phantomgrimsalvo-svg/kodi-andrew-workshop/releases/download/v1.0.0/repository.andrew-1.0.0.zip
+   https://github.com/phantomgrimsalvo-svg/kodi-andrew-workshop/releases/download/v1.1.0/repository.andrew-1.0.0.zip
+
+Release page: https://github.com/phantomgrimsalvo-svg/kodi-andrew-workshop/releases/tag/v1.1.0
 
 Same files as raw GitHub (no redirect; good if a TV browser chokes on the Release links):
 
@@ -24,7 +28,7 @@ Same files as raw GitHub (no redirect; good if a TV browser chokes on the Releas
 - https://raw.githubusercontent.com/phantomgrimsalvo-svg/kodi-andrew-workshop/main/zips/plugin.video.cumination.andrew-1.2.1.zip
 - https://raw.githubusercontent.com/phantomgrimsalvo-svg/kodi-andrew-workshop/main/zips/repository.andrew-1.0.0.zip
 
-Release page with all four buttons: https://github.com/phantomgrimsalvo-svg/kodi-andrew-workshop/releases/tag/v1.0.0
+Release page with all four buttons: https://github.com/phantomgrimsalvo-svg/kodi-andrew-workshop/releases/tag/v1.1.0
 
 ---
 
