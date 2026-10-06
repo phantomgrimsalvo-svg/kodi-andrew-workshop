@@ -1,0 +1,9 @@
+{
+  "note": "Zips fetched into zips/<id>/ and flat zips/ by .github/workflows/publish-kodi-repo.yml. Add a line, push, and the workflow publishes it and rebuilds addons.xml.",
+  "zips": [
+    {"url": "https://github.com/phantomgrimsalvo-svg/plugin.video.cumination.andrew/releases/download/v1.2.10/plugin.video.cumination.andrew-1.2.10.zip",
+     "sha256": "85d58e3cc9a4ade29daa2014cd617eed1b10fbadfa86ecdec0cb36c98c9737d9"},
+    {"url": "https://github.com/phantomgrimsalvo-svg/skin.arctic.fuse.3.andrew/releases/download/v1.2.1/skin.arctic.fuse.3.andrew-3.3.2.zip",
+     "sha256": "66ae5d416dbe4b2e607050f6d46bbf80dedd37a783a72bb34b4061ac11d6c406"}
+  ]
+}

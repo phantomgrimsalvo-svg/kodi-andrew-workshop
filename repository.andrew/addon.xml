@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.andrew" name="Andrew's Kodi Workshop" version="1.0.0" provider-name="Andrew Webber">
+<addon id="repository.andrew" name="Andrew's Kodi Workshop" version="1.2.0" provider-name="Andrew Webber">
     <extension point="xbmc.addon.repository" name="Andrew's Kodi Workshop">
         <dir>
             <info compressed="false">https://raw.githubusercontent.com/phantomgrimsalvo-svg/kodi-andrew-workshop/main/addons.xml</info>
@@ -11,10 +11,15 @@
             <checksum>https://phantomgrimsalvo-svg.github.io/kodi-andrew-workshop/addons.xml.md5</checksum>
             <datadir zip="true">https://phantomgrimsalvo-svg.github.io/kodi-andrew-workshop/zips/</datadir>
         </dir>
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
+        </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
         <summary lang="en_GB">Andrew's personal Kodi forks</summary>
-        <description lang="en_GB">Install Cumination (Andrew), Arctic Fuse 3 (Andrew), and TMDb Helper (Andrew) from a public GitHub Pages source. Personal forks only — not affiliated with jurialmunkey or dobbelina.</description>
+        <description lang="en_GB">Cumination (Andrew), Arctic Fuse 3 (Andrew) and TMDb Helper (Andrew) from kodi-andrew-workshop on GitHub, with Kodi auto-updates. ResolveURL and resolveurl.xxx come from Gujal00/smrzips; other dependencies come from the official Kodi repository. Personal forks only — not affiliated with jurialmunkey, dobbelina, or Gujal.</description>
         <disclaimer lang="en_GB">Adult add-on included (Cumination). Enable Unknown sources in Kodi first. Arctic Fuse 3 is licensed CC-BY-NC-SA (non-commercial).</disclaimer>
         <platform>all</platform>
         <license>GPL-2.0-or-later</license>

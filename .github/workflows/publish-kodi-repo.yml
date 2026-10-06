@@ -1,0 +1,29 @@
+name: Publish Kodi repo
+on:
+  push:
+    branches: [main]
+    paths:
+      - tools/**
+      - repository.andrew/**
+      - .github/workflows/publish-kodi-repo.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: publish-kodi-repo
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch zips and rebuild addons.xml
+        run: python3 tools/build_repo.py
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A zips addons.xml addons.xml.md5 index.html
+          if git diff --cached --quiet; then echo "nothing to publish"; exit 0; fi
+          git commit -m "Publish latest Kodi zips and addons.xml"
+          git push
