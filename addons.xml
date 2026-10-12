@@ -30,7 +30,7 @@
         </assets>
     </extension>
 </addon>
-<addon id="plugin.video.cumination.andrew" name="Cumination (Andrew)" provider-name="Cumination / Andrew Webber" version="1.2.18">
+<addon id="plugin.video.cumination.andrew" name="Cumination (Andrew)" provider-name="Cumination / Andrew Webber" version="1.2.19">
     <requires>
         <import addon="script.module.six" />
         <import addon="script.module.kodi-six" />
@@ -59,7 +59,7 @@
     </extension>
 </addon>
 <addon id="plugin.video.themoviedb.helper.andrew"
-version="6.18.2"
+version="6.18.3"
 name="TMDb Helper (Andrew)"
 provider-name="jurialmunkey / Andrew Webber">
 <requires>
@@ -80,7 +80,7 @@ provider-name="jurialmunkey / Andrew Webber">
 <extension point="xbmc.addon.metadata">
   <reuselanguageinvoker>false</reuselanguageinvoker>
   <summary lang="de_DE">TMDb Helfer</summary>
-  <news>6.18.2: Settings opens on Speed. Speed mode (Max Quality, Balanced, Fast, Max Speed, Custom) sets Light service, online artwork, online ratings, online clearlogo, artwork quality, player library recache, library auto-update, and Trakt list cache. Changing one of those sets Custom. The preset starts on Custom so an upgrade does not change your switches. 6.18.1: Light service (off by default) skips the startup Kodi library scan and pauses the listitem and artwork poller. Leave it off to keep the current background service. Arctic Fuse 3 (Andrew) has the same switch under Skin settings.</news>
+  <news>6.18.3: The service no longer reads or writes settings inside the settings-changed callback, which deadlocked Kodi in 6.18.2. Speed presets still apply from the service loop. 6.18.2: Settings opens on Speed. Speed mode (Max Quality, Balanced, Fast, Max Speed, Custom) sets Light service, online artwork, online ratings, online clearlogo, artwork quality, player library recache, library auto-update, and Trakt list cache. Changing one of those sets Custom. The preset starts on Custom so an upgrade does not change your switches. 6.18.1: Light service (off by default) skips the startup Kodi library scan and pauses the listitem and artwork poller. Leave it off to keep the current background service. Arctic Fuse 3 (Andrew) has the same switch under Skin settings.</news>
   <summary lang="en_GB">TMDb Helper</summary>
   <summary lang="es_ES">Asistente TMDb</summary>
   <summary lang="zh_CN">TMDb 助手</summary>
