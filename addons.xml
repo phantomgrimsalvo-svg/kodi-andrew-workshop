@@ -30,7 +30,7 @@
         </assets>
     </extension>
 </addon>
-<addon id="plugin.video.cumination.andrew" name="Cumination (Andrew)" provider-name="Cumination / Andrew Webber" version="1.2.13">
+<addon id="plugin.video.cumination.andrew" name="Cumination (Andrew)" provider-name="Cumination / Andrew Webber" version="1.2.14">
     <requires>
         <import addon="script.module.six" />
         <import addon="script.module.kodi-six" />
@@ -59,7 +59,7 @@
     </extension>
 </addon>
 <addon id="plugin.video.themoviedb.helper.andrew"
-version="6.18.0"
+version="6.18.1"
 name="TMDb Helper (Andrew)"
 provider-name="jurialmunkey / Andrew Webber">
 <requires>
@@ -80,6 +80,7 @@ provider-name="jurialmunkey / Andrew Webber">
 <extension point="xbmc.addon.metadata">
   <reuselanguageinvoker>false</reuselanguageinvoker>
   <summary lang="de_DE">TMDb Helfer</summary>
+  <news>6.18.1: Light service (off by default) skips the startup Kodi library scan and pauses the listitem and artwork poller. Leave it off to keep the current background service. Arctic Fuse 3 (Andrew) has the same switch under Skin settings.</news>
   <summary lang="en_GB">TMDb Helper</summary>
   <summary lang="es_ES">Asistente TMDb</summary>
   <summary lang="zh_CN">TMDb 助手</summary>
@@ -107,7 +108,7 @@ provider-name="jurialmunkey / Andrew Webber">
   </assets>
 </extension>
 </addon>
-<addon id="skin.arctic.fuse.3.andrew" name="Arctic Fuse 3 (Andrew)" provider-name="jurialmunkey / Andrew Webber" version="3.3.6">
+<addon id="skin.arctic.fuse.3.andrew" name="Arctic Fuse 3 (Andrew)" provider-name="jurialmunkey / Andrew Webber" version="3.3.7">
     <requires>
         <import addon="xbmc.gui" version="5.17.0" />
         <import addon="script.skinvariables" version="2.2.3" />
@@ -128,7 +129,7 @@ provider-name="jurialmunkey / Andrew Webber">
         <res aspect="18:9" default="false" folder="1080i" width="2160" height="1080" />
     </extension>
     <extension point="xbmc.addon.metadata">
-        <news>3.3.6: Removed the Cumination pan background and the dual highlight colour controls. Letterboxing, Cumination (All sites) search, and the multi-select shortcut editor are unchanged. 3.3.5: Menu, shortcut and widget editors can highlight more than one item. Space, or Select in the options list, toggles the highlight. Add selected opens a shortcut browser where Space or Select highlights items and Add selected inserts them together after a confirmation. Delete selected and Delete all ask before removing the highlighted items or the whole list. The original Add, Choose and Path buttons still add one item at a time. 3.3.4: Search adds a Cumination (All sites) results row next to the TMDb search categories. The typed search is URL-encoded and sent to Cumination (Andrew) global search (mode=skin_search). The row is on by default; turn it off under Skin settings or the Search shortcut options. 3.3.3: Cumination pan background (Fanart extras, on by default) shows the addon slow top-to-bottom portrait pan full screen while browsing Cumination (Andrew). Letterbox in Fanart extras now letterboxes landscape art inside poster and portrait thumbnails (dark bars, centered) instead of center-cropping; zoom still crops and focus is unchanged. Background fanart uses the thumb or poster, letterboxed with a darkened fill, when the item only has portrait art.</news>
+        <news>3.3.7: Skin settings adds Light background service (off by default). Turn it on to pause the TMDb Helper listitem and artwork poller and to skip preloading every hub at startup. Letterboxing, Cumination search, and the multi-select editor are unchanged. 3.3.6: Removed the Cumination pan background and the dual highlight colour controls. Letterboxing, Cumination (All sites) search, and the multi-select shortcut editor are unchanged. 3.3.5: Menu, shortcut and widget editors can highlight more than one item. Space, or Select in the options list, toggles the highlight. Add selected opens a shortcut browser where Space or Select highlights items and Add selected inserts them together after a confirmation. Delete selected and Delete all ask before removing the highlighted items or the whole list. The original Add, Choose and Path buttons still add one item at a time. 3.3.4: Search adds a Cumination (All sites) results row next to the TMDb search categories. The typed search is URL-encoded and sent to Cumination (Andrew) global search (mode=skin_search). The row is on by default; turn it off under Skin settings or the Search shortcut options. 3.3.3: Cumination pan background (Fanart extras, on by default) shows the addon slow top-to-bottom portrait pan full screen while browsing Cumination (Andrew). Letterbox in Fanart extras now letterboxes landscape art inside poster and portrait thumbnails (dark bars, centered) instead of center-cropping; zoom still crops and focus is unchanged. Background fanart uses the thumb or poster, letterboxed with a darkened fill, when the item only has portrait art.</news>
         <summary lang="en">A minimal row based skin</summary>
         <summary lang="es">Una skin minimalista de diseño horizontal</summary>
         <summary lang="de">Ein minimalistisches, zeilenbasiertes Skin</summary>
