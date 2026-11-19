@@ -58,7 +58,7 @@
         </assets>
     </extension>
 </addon>
-<addon id="plugin.video.hearth" name="Hearth" version="0.7.0" provider-name="Hearth">
+<addon id="plugin.video.hearth" name="Hearth" version="0.7.1" provider-name="Hearth">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
   </requires>
