@@ -102,6 +102,7 @@ def main():
         "plugin.video.cumination.andrew": "Cumination (Andrew)",
         "skin.arctic.fuse.3.andrew": "Arctic Fuse 3 (Andrew)",
         "plugin.video.themoviedb.helper.andrew": "TMDb Helper (Andrew)",
+        "plugin.video.hearth": "Hearth",
     }
     li = "\n".join(
         f'    <li>{html.escape(names.get(a, a))} {latest[a][0]}: '
