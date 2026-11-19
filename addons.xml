@@ -58,6 +58,37 @@
         </assets>
     </extension>
 </addon>
+<addon id="plugin.video.hearth" name="Hearth" version="0.5.9" provider-name="Hearth">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="login"/>
+  <extension point="kodi.context.item">
+    <menu id="kodi.core.main">
+      <item library="context_add_to_list.py">
+        <label>Add to Hearth list…</label>
+        <visible>!ListItem.IsFolder</visible>
+      </item>
+      <item library="context_add_folder.py">
+        <label>Add this folder/widget to Hearth</label>
+        <visible>ListItem.IsFolder</visible>
+      </item>
+    </menu>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Local-first lists for Kodi</summary>
+    <description lang="en_GB">Hearth keeps Next Up, watchlist, favorites, and the rest of your lists in a local database. Playback is handed to a player add-on you choose. After the one-time Trakt import, browsing and widgets do not use the network.</description>
+    <platform>all</platform>
+    <license>GPL-2.0-or-later</license>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.png</fanart>
+    </assets>
+  </extension>
+</addon>
 <addon id="plugin.video.themoviedb.helper.andrew"
 version="6.18.3"
 name="TMDb Helper (Andrew)"
