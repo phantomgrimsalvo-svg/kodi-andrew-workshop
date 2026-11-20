@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch fork zips, build repository.andrew zip, regenerate addons.xml/.md5 and index pages."""
+"""Fetch fork zips, build repository.andrew zip, extract add-on images, regenerate addons.xml/.md5 and index pages."""
 import hashlib, html, json, os, re, shutil, sys, urllib.request, zipfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -51,6 +51,40 @@ def fetch(entry):
     os.remove(tmp)
 
 
+def asset_rels(text):
+    m = re.search(r"<assets\b[^>]*>(.*?)</assets>", text, re.S)
+    if not m:
+        return ["icon.png", "fanart.jpg"]
+    rels = []
+    for _tag, inner in re.findall(r"<([A-Za-z0-9_.-]+)\b[^>]*>(.*?)</\1>", m.group(1), re.S):
+        path = html.unescape(inner).strip().replace("\\", "/").lstrip("/")
+        if not path or path.startswith(("http://", "https://")):
+            continue
+        parts = path.split("/")
+        if any(part in ("", ".", "..") for part in parts):
+            continue
+        rels.append(path)
+    return list(dict.fromkeys(rels))
+
+
+def extract_assets(zip_path, aid, text):
+    written = []
+    with zipfile.ZipFile(zip_path) as z:
+        names = set(z.namelist())
+        for rel in asset_rels(text):
+            member = f"{aid}/{rel}"
+            if member not in names:
+                print(f"asset skip {aid} {rel}")
+                continue
+            dest = os.path.join(ZIPS, aid, *rel.split("/"))
+            os.makedirs(os.path.dirname(dest), exist_ok=True)
+            with z.open(member) as src, open(dest, "wb") as out:
+                shutil.copyfileobj(src, out)
+            written.append(f"zips/{aid}/{rel}")
+    print(f"assets {aid} {written}")
+    return written
+
+
 def build_repo_zip():
     src = os.path.join(ROOT, "repository.andrew")
     text = open(os.path.join(src, "addon.xml"), encoding="utf-8").read()
@@ -82,10 +116,13 @@ def main():
             zid, ver, text = addon_xml_from_zip(os.path.join(d, f))
             if zid != aid or f != f"{aid}-{ver}.zip":
                 sys.exit(f"bad zip {aid}/{f}: contains {zid} {ver}")
+            zpath = os.path.join(d, f)
             if aid not in latest or vkey(ver) > vkey(latest[aid][0]):
-                latest[aid] = (ver, text)
+                latest[aid] = (ver, text, zpath)
     parts = ['<?xml version="1.0" encoding="UTF-8" standalone="yes"?>', "<addons>"]
     order = ["repository.andrew"] + sorted(a for a in latest if a != "repository.andrew")
+    for aid in order:
+        extract_assets(latest[aid][2], aid, latest[aid][1])
     for aid in order:
         body = re.sub(r"^\s*<\?xml[^>]*\?>\s*", "", latest[aid][1]).strip()
         parts.append(body)
